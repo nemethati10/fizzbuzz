@@ -18,6 +18,8 @@ public class FizzBuzzService {
     private static final String FIZZ_BUZZ = "FizzBuzz";
 
     /**
+     * Generates the FizzBuzz sequence up until a given value.
+     *
      * @param n
      *         the last element of the sequence
      *

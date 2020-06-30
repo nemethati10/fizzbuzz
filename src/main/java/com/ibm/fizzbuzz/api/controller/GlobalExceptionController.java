@@ -30,11 +30,10 @@ public class GlobalExceptionController {
     @ExceptionHandler({ HttpRequestMethodNotSupportedException.class, MethodArgumentTypeMismatchException.class })
     public ResponseEntity<FizzBuzzBE> handleException(final Exception exception) {
         final FizzBuzzBE fizzBuzz = new FizzBuzzBE();
-        String message = INVALID_PATH_VARIABLE;
         if (exception instanceof HttpRequestMethodNotSupportedException) {
             fizzBuzz.setMessage(INVALID_REQUEST_METHOD);
             return new ResponseEntity<>(fizzBuzz, HttpStatus.METHOD_NOT_ALLOWED);
-        } fizzBuzz.setMessage(message);
+        } fizzBuzz.setMessage(INVALID_PATH_VARIABLE);
         return new ResponseEntity<>(fizzBuzz, HttpStatus.BAD_REQUEST);
     }
 
