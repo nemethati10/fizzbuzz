@@ -20,7 +20,7 @@ import com.ibm.fizzbuzz.entity.FizzBuzzBE;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = FizzBuzzApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class FizzBuzzControllerTest {
+public class FizzBuzzControllerIT {
 
     private static final String URL = "/api/v1/fizzbuzz/";
 
@@ -30,7 +30,7 @@ public class FizzBuzzControllerTest {
     @LocalServerPort
     private int port;
 
-    public FizzBuzzControllerTest() {
+    public FizzBuzzControllerIT() {
 
     }
 
